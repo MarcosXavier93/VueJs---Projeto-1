@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<div id="app">
+    <p v-once>{{ titulo }}</p> <! --Atualiza o valor apenas uma vez -->   
+    <p>{{ saudacao() }}</p><! --Atualiza o valor toda vez que Titulo alterar o valor -->   
+    <a v-bind:href="link">Google</a>
+    <p v-html="linkhtml"></p>
+</div>
+
+<script>
+ new Vue({
+    el:'#app',
+    data:{
+        titulo:'Usando JS!@!',
+        link: 'https://google.com',
+        linkhtml:'<a href="http://google.com"> Google</a>'
+    },
+    methods:{
+        saudacao: function(){
+            this.titulo= 'Bom Dia'
+            return this.titulo
+        }
+    }
+})
+</script>
