@@ -3,17 +3,15 @@ new Vue({
     data:{
         titulo: 'Usando JS!',
         Nome: 'Marcos Junio',
-        Idade: '27',
+        Idade: 28,
         ResultadoRandomico:'0',
     },
     methods:{
         saudacao: function(){
             return 'Boa Semana!'
         },
-        methods: {
-            this.ResultadoRandomico= Math.random()
-            return this.ResultadoRandomico
-            
+        randomico:function() { 
+                return Math.random()
         }
 
     }
